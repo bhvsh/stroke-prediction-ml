@@ -19,27 +19,3 @@ Data formatting for processing:
     2 - never smoked
     1 - formerly smoked
     3 - smokes
-
-
-after robustScaling mess:
-Data formatting for processing:
-  gender:
-    1 - Male
-    0 - Female
-  ever_married:
-    0 - No
-    1 - Yes
-  work_type:
-    -2 - Govt_job
-    0 - Private
-    1 - Self-employed
-    2 - children
-    -1 - Never_worked
-  Residence_type:
-    0 - Rural
-    1 - Urban
-  smoking_status:
-    0 - unanswered
-    2 - never smoked
-    1 - formerly smoked
-    3 - smokes
