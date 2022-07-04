@@ -22,18 +22,12 @@ def app():
         ch_gender = st.selectbox(
             'Gender: ',
             ('Male', 'Female', 'Others'))
-
-        #st.write('You selected:', ch_gender)
             
         ch_age = st.number_input('Age: ',min_value=0, max_value=150, value=18,step=1)
-        
-        #st.write('The current number is ', ch_age)
 
         ch_restype = st.radio(
             'Residence Type: ',
             ('Urban', 'Rural'))
-
-        #st.write('You selected:', ch_restype)
 
         ch_marital = st.radio(
             'Did you ever get married? ',
@@ -42,8 +36,6 @@ def app():
         ch_worktype = st.selectbox(
         'Work type: ',
         ('I\'m a child.', 'I\'m self employed', 'Working for the Private.','Working for the Government.','Never worked for anyone.'))
-
-        #st.write('You selected:', ch_worktype)
 
         st.subheader('Stage 2: Health Questions')
 
@@ -88,7 +80,6 @@ def app():
                 if prediction==0:
                     str_result = 'The model predicts that with the probability of %.2f%%, you won\'t be suffering from stroke in the future.'%(predictval[0][0]*100)
                     st.success(str_result)
-                    #st.write("Probability: ",predictval[0][0])
                     st.write("""
                         The best way to help prevent a stroke is to eat a healthy diet, exercise regularly, and avoid smoking and drinking too much alcohol.
                         These lifestyle changes can reduce your risk of problems like:
@@ -103,7 +94,6 @@ def app():
                 elif prediction==1:
                     str_result = 'The model predicts that with the probability of %.2f%%, you will be suffering from stroke in the future.'%(predictval[0][1]*100)
                     st.error(str_result)
-                    #st.write("Probability: ",predictval[0][1])
                     if predictval[0][1] >= 0.85:
                         st.subheader("Please seek medical attention as early as possible to mitigate the stroke disease.")
                     st.write("""
